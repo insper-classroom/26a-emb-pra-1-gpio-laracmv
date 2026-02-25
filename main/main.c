@@ -41,13 +41,13 @@ int main() {
 
     while (true) {
         
-        printf("Hello, world!\n");
-        int i = 0;
 
         
         if (!gpio_get(BTN_BRANCO)){
             gpio_put(LED_BRANCO,1);
-        
+            
+            int i = 0;
+            
             while (i< 2048/4){
                 gpio_put(BOBINA_1, 1);
                 sleep_ms(5);
